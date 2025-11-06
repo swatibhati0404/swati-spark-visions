@@ -85,11 +85,11 @@ const PsychologyInsights = () => {
             >
               <div className="grid lg:grid-cols-2 gap-6">
                 {/* Image Section */}
-                <div className="relative overflow-hidden bg-muted/30 flex items-center justify-center p-6">
+                <div className="relative overflow-hidden bg-muted/30 flex items-center justify-center p-8">
                   <img
                     src={test.image}
                     alt={test.title}
-                    className="max-w-lg w-full h-auto rounded-lg shadow-2xl glow-border-blue transform group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-auto rounded-lg shadow-2xl glow-border-blue transform group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
 
