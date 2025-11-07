@@ -64,18 +64,18 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" ref={sectionRef} className="min-h-screen py-20 px-6">
+    <section id="contact" ref={sectionRef} className="min-h-screen py-20 px-6 bg-gradient-to-b from-card/30 to-background">
       <div className="max-w-5xl mx-auto">
-        <h2 className="text-5xl font-bold mb-6 text-center section-animate">
-          <span className="gradient-text">Contact Me</span>
+        <h2 className="text-5xl font-bold mb-6 text-center section-animate glow-text-blue">
+          Get in Touch
         </h2>
         <p className="text-center text-muted-foreground mb-16 section-animate">
-          Let's build something meaningful together
+          Let's collaborate and create something amazing together
         </p>
 
         <div className="grid md:grid-cols-2 gap-8">
           {/* Contact Form */}
-          <Card className="bg-card border-primary/20 section-animate">
+          <Card className="bg-card border-primary/20 glow-border-blue section-animate">
             <CardHeader>
               <CardTitle>Send a Message</CardTitle>
             </CardHeader>
@@ -83,7 +83,7 @@ const Contact = () => {
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
                   <Input
-                    placeholder="Your Name"
+                    placeholder="Name"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     className="bg-background border-primary/20 focus:border-primary"
@@ -93,7 +93,7 @@ const Contact = () => {
                 <div>
                   <Input
                     type="email"
-                    placeholder="Your Email"
+                    placeholder="Email"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     className="bg-background border-primary/20 focus:border-primary"
@@ -102,16 +102,16 @@ const Contact = () => {
                 </div>
                 <div>
                   <Textarea
-                    placeholder="Your Message"
+                    placeholder="Message"
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    className="bg-background border-primary/20 focus:border-primary min-h-32"
+                    className="bg-background border-primary/20 focus:border-primary min-h-32 resize-none"
                     required
                   />
                 </div>
                 <Button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-primary to-secondary hover:opacity-90 text-foreground glow-border-blue"
+                  className="w-full bg-primary hover:bg-primary/90 text-primary-foreground glow-border-blue transition-all"
                 >
                   <Send className="w-4 h-4 mr-2" />
                   Send Message
@@ -122,7 +122,7 @@ const Contact = () => {
 
           {/* Social Links */}
           <div className="space-y-6 section-animate" style={{ animationDelay: "0.1s" }}>
-            <Card className="bg-card border-primary/20">
+            <Card className="bg-card border-primary/20 glow-border-blue">
               <CardHeader>
                 <CardTitle>Connect With Me</CardTitle>
               </CardHeader>
@@ -133,12 +133,12 @@ const Contact = () => {
                     href={social.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`flex items-center gap-4 p-4 rounded-lg border border-${social.color}/20 hover:border-${social.color}/50 hover:bg-${social.color}/5 transition-all duration-300 group`}
+                    className="flex items-center gap-4 p-4 rounded-lg border border-primary/20 hover:border-primary hover:bg-primary/5 transition-all duration-300 group"
                   >
-                    <div className={`p-3 rounded-lg bg-${social.color}/10 text-${social.color} group-hover:bg-${social.color} group-hover:text-${social.color}-foreground transition-all duration-300`}>
+                    <div className="p-3 rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300 glow-text-blue">
                       {social.icon}
                     </div>
-                    <span className="font-medium">{social.name}</span>
+                    <span className="font-medium group-hover:text-primary transition-colors">{social.name}</span>
                   </a>
                 ))}
               </CardContent>

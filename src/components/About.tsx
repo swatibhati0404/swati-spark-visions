@@ -45,21 +45,21 @@ const About = () => {
   ];
 
   return (
-    <section id="about" ref={sectionRef} className="min-h-screen py-20 px-6">
+    <section id="about" ref={sectionRef} className="min-h-screen py-20 px-6 bg-gradient-to-b from-background to-card/30">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-5xl font-bold mb-16 text-center section-animate">
-          <span className="gradient-text">About Me</span>
+        <h2 className="text-5xl font-bold mb-16 text-center section-animate glow-text-blue">
+          About Me
         </h2>
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Photo */}
           <div className="flex justify-center section-animate">
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-2xl blur-2xl"></div>
-              <div className="relative w-full max-w-md aspect-square rounded-2xl overflow-hidden border-2 border-primary/30">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-secondary/30 rounded-2xl blur-3xl animate-pulse"></div>
+              <div className="relative w-full max-w-md aspect-square rounded-2xl overflow-hidden border-2 border-primary/30 glow-border-blue">
                 <img
                   src={swatiPhoto}
-                  alt="Swati Bhati"
+                  alt="Swati Bhati - Aspiring Engineer"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -70,13 +70,15 @@ const About = () => {
           <div className="space-y-8 section-animate" style={{ animationDelay: "0.2s" }}>
             <div className="space-y-4">
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Hi! I'm <span className="text-primary font-semibold">Swati Bhati</span>, an aspiring engineer passionate about the intersection of{" "}
+                I'm <span className="text-primary font-semibold">Swati Bhati</span>, an aspiring engineer passionate about the intersection of{" "}
                 <span className="text-secondary font-semibold">AI</span>,{" "}
                 <span className="text-primary font-semibold">design</span>, and{" "}
                 <span className="text-secondary font-semibold">innovation</span>.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                I believe in creating solutions that not only solve problems but also inspire and empower others. My journey in engineering is driven by curiosity, creativity, and a desire to make a meaningful impact.
+                My journey began with curiosity about how technology shapes our world, evolving into 
+                a dedication to creating meaningful solutions that bridge the gap between human needs 
+                and technological possibilities. I believe in crafting solutions that don't just work—they inspire and empower.
               </p>
             </div>
 

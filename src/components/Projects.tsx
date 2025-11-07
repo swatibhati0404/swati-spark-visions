@@ -52,22 +52,22 @@ const Projects = () => {
   return (
     <section id="projects" ref={sectionRef} className="min-h-screen py-20 px-6 bg-card/30">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-5xl font-bold mb-16 text-center section-animate">
-          <span className="gradient-text">Projects</span>
+        <h2 className="text-5xl font-bold mb-16 text-center section-animate glow-text-pink">
+          My Projects
         </h2>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <Card
               key={index}
-              className="bg-card border-primary/20 hover:border-primary/50 transition-all duration-300 group section-animate hover:shadow-[0_0_30px_rgba(0,217,255,0.2)]"
+              className="bg-card border-primary/20 hover:border-primary transition-all duration-300 group section-animate hover:scale-105 glow-border-blue cursor-pointer"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <CardHeader>
-                <CardTitle className="text-xl group-hover:text-primary transition-colors duration-300">
+                <CardTitle className="text-xl group-hover:gradient-text transition-all duration-300">
                   {project.title}
                 </CardTitle>
-                <CardDescription className="text-muted-foreground">
+                <CardDescription className="text-muted-foreground group-hover:text-foreground transition-colors">
                   {project.description}
                 </CardDescription>
               </CardHeader>
@@ -76,7 +76,7 @@ const Projects = () => {
                   {project.tags.map((tag, tagIndex) => (
                     <span
                       key={tagIndex}
-                      className="px-3 py-1 text-xs rounded-full bg-primary/10 text-primary border border-primary/20"
+                      className="px-3 py-1 text-xs rounded-full bg-primary/10 text-primary border border-primary/20 group-hover:bg-primary/20 transition-colors"
                     >
                       {tag}
                     </span>
@@ -87,15 +87,17 @@ const Projects = () => {
                 <Button
                   variant="outline"
                   size="sm"
-                  className="border-primary text-primary hover:bg-primary/10 flex-1"
+                  className="border-primary text-primary hover:bg-primary hover:text-primary-foreground glow-border-blue flex-1"
+                  onClick={() => window.open(project.link, "_blank")}
                 >
                   <ExternalLink className="w-4 h-4 mr-2" />
-                  View
+                  View Details
                 </Button>
                 <Button
                   variant="outline"
                   size="sm"
-                  className="border-secondary text-secondary hover:bg-secondary/10 flex-1"
+                  className="border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground glow-border-pink flex-1"
+                  onClick={() => window.open(project.github, "_blank")}
                 >
                   <Github className="w-4 h-4 mr-2" />
                   Code

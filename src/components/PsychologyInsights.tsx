@@ -67,13 +67,13 @@ const PsychologyInsights = () => {
   ];
 
   return (
-    <section id="psychology" ref={sectionRef} className="min-h-screen py-20 px-6">
+    <section id="psychology" ref={sectionRef} className="min-h-screen py-20 px-6 bg-gradient-to-b from-background to-card/30">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-5xl font-bold mb-6 text-center section-animate">
-          <span className="gradient-text">Inside My Mind</span>
+        <h2 className="text-5xl font-bold mb-6 text-center section-animate glow-text-blue">
+          My Psychology Insights
         </h2>
         <p className="text-center text-muted-foreground mb-16 section-animate">
-          Psychological insights that shape my approach to problem-solving
+          Understanding myself through psychological assessments and how they shaped my growth
         </p>
 
         <div className="space-y-12">
@@ -89,7 +89,7 @@ const PsychologyInsights = () => {
                   <img
                     src={test.image}
                     alt={test.title}
-                    className="w-full h-auto rounded-lg shadow-2xl glow-border-blue transform group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-auto max-w-md rounded-lg shadow-2xl glow-border-blue transform group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
 

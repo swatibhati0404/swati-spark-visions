@@ -33,9 +33,41 @@ const Resume = () => {
   return (
     <section id="resume" ref={sectionRef} className="min-h-screen py-20 px-6 bg-card/30">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-5xl font-bold mb-16 text-center section-animate">
-          <span className="gradient-text">Resume</span>
+        <h2 className="text-5xl font-bold mb-16 text-center section-animate glow-text-pink">
+          Resume
         </h2>
+
+        {/* Download Button */}
+        <div className="flex justify-center mb-12 section-animate">
+          <Button
+            size="lg"
+            className="bg-primary hover:bg-primary/90 text-primary-foreground glow-border-blue text-lg px-8"
+            onClick={() => {
+              const link = document.createElement('a');
+              link.href = '/Swati_Bhati_Resume.png';
+              link.download = 'Swati_Bhati_Resume.png';
+              document.body.appendChild(link);
+              link.click();
+              document.body.removeChild(link);
+            }}
+          >
+            <Download className="mr-2 h-5 w-5" />
+            Download Resume
+          </Button>
+        </div>
+
+        {/* Resume Embed */}
+        <div className="mb-12 section-animate">
+          <div className="bg-card border-2 border-primary/20 rounded-lg p-4 glow-border-blue">
+            <div className="w-full overflow-auto" style={{ maxHeight: "800px" }}>
+              <img 
+                src="/Swati_Bhati_Resume.png" 
+                alt="Swati Bhati Resume" 
+                className="w-full h-auto"
+              />
+            </div>
+          </div>
+        </div>
 
         <div className="grid lg:grid-cols-3 gap-8">
           {/* Education */}
